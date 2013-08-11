@@ -58,5 +58,13 @@ int main()
 	
 	F a;
 	function(a);
+	/**output
+	0xbfad86b8; constructor:(0/1)
+	F(const F &)
+	F(const F &)
+	0xbfad86c0; destructor:(0/1)//返回值
+	0xbfad86c8; destructor:(0/1)//形参析构
+	0xbfad86b8; destructor:(0/1)//实参析构
+	*/
 	return 0;
 }
