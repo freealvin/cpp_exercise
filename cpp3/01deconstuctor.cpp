@@ -7,7 +7,7 @@ class F{
 	public:
 		F(int n=0, int d=1);
 		F(const F &a):n(a.n), d(a.d){cout<<"F(const F &)"<<endl;};//拷贝构造函数
-		//如果定义拷贝构造参数，编译器会自动产生一个拷贝构造参数，逐个拷贝成员值
+		//如果不定义拷贝构造参数，编译器会自动产生一个拷贝构造参数，逐个拷贝成员值
 		void print(bool newline=true);
 		void print(bool newline=true)const;//const指的是对象自身,数据不能修改
 		//成员函数中，有cosnt和没const构成重载
