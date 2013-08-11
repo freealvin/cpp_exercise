@@ -6,6 +6,8 @@ class F{
 	int d;
 	public:
 		F(int n=0, int d=1);
+		F(const F &a):n(a.n), d(a.d){cout<<"F(const F &)"<<endl;};//拷贝构造函数
+		//如果定义拷贝构造参数，编译器会自动产生一个拷贝构造参数，逐个拷贝成员值
 		void print(bool newline=true);
 		void print(bool newline=true)const;//const指的是对象自身,数据不能修改
 		//成员函数中，有cosnt和没const构成重载
@@ -14,7 +16,7 @@ class F{
 
 F::F(int n, int d):n(n), d(d)
 {
-	cout<<"constructor:(" << n << "/" << d << ")"<<endl;
+	cout<<this<<"; constructor:(" << n << "/" << d << ")"<<endl;
 }
 
 void F::print(bool newline)
@@ -34,18 +36,27 @@ void compare(const F &a, F &b)
 	b.print();//cout<<"&b"<<&b<<endl;
 }
 
+F function(F f)
+{
+	return f;
+}
+
 F::~F()
 {
-	cout<<"destructor:(" << n << "/" << d << ")"<<endl;
+	cout<<this<<"; destructor:(" << n << "/" << d << ")"<<endl;
 }
 int main()
 {
-	const F a(2,3);
+	/*F a(2,3);
 	F b;
 	a.print();
 	b.print();
 	cout<<&a<<endl;
 	cout<<&b<<endl;
 	compare(a, b);
+	*/
+	
+	F a;
+	function(a);
 	return 0;
 }
