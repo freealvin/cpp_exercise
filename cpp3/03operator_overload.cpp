@@ -6,7 +6,7 @@ class Fraction{
 	int d;
 	public:
 	Fraction(int n=0, int d=1):n(n), d(d){}
-	const Fraction operator+(const Fraction &f)const;
+	Fraction operator+(Fraction &f)const;
 	friend istream &operator>>(istream &in, Fraction &f);
 	friend ostream &operator<<(ostream &out, Fraction &f);
 };
@@ -18,7 +18,7 @@ int gcd(int a, int b)
 	return gcd(b, a%b);
 }
 //作为函数成员，重载+运算符
-const Fraction Fraction::operator+(const Fraction &f)const
+Fraction Fraction::operator+(Fraction &f)const
 {
 	Fraction fra;
 	fra.n = (f.n)*d + n*(f.d);
@@ -50,6 +50,6 @@ int main()
 	Fraction f2;
 	cin>>f1>>f2;
 	cout<<f1<<f2;
-	//cout<<(f1+f2);
+	cout<<(f1+f2);
 	return 0;
 }
