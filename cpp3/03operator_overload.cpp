@@ -27,6 +27,7 @@ class Fraction{
 			reduce();
 		}
 		Fraction operator+( const Fraction &f2)const;
+		Fraction operator*( const Fraction &f2)const;
 		friend istream &operator>>(istream &in, Fraction &f);
 		friend ostream &operator<<(ostream &out,const Fraction &f);
 };
@@ -37,6 +38,11 @@ Fraction Fraction::operator+( const Fraction &f2)const
 {
 	Fraction res(n*f2.d + d*f2.n, d*f2.d);
 	return res;
+}
+
+Fraction Fraction::operator*(const Fraction &f2)const
+{
+	return Fraction (n*f2.n, d*f2.d);//匿名对象，编译器可以对匿名对象做优化,提高效率
 }
 
 //重载>>，以便于输入
@@ -61,5 +67,6 @@ int main()
 	cin>>f1>>f2;
 	cout<<f1<<','<<f2<<endl;
 	cout<<f1+f2<<endl;//temp f1+f2, operator<<(cout, temp), it's not allowed to bind the temporary value to a non-const reference
+	cout<<f1*f2<<endl;
 	return 0;
 }
