@@ -19,15 +19,18 @@ struct Person{
 	~Person(){
 		cout<<"释放Person对象"<<this<<endl;
 	}
+	
 
 };
 
 class autodelete{
 	Person* p;
+	int cnt;
 	public:
-	autodelete(Person *person){
+	autodelete(Person *person):cnt(1){
 		p = person;
 	}
+	autodelete(const autodelete &per):p(per.p){cnt++;cout<<cnt<<endl;}
 	~autodelete(){
 		delete p;//调用结构体的析构函数
 	}
@@ -45,6 +48,8 @@ class autodelete{
 int main()
 {
 	autodelete a = new Person;
+	autodelete b = a;
+	autodelete c = a;
 	cout<<a->age<<endl;
 	a->birth.year = 1992;
 	cout<<(*a).birth.year<<endl;
