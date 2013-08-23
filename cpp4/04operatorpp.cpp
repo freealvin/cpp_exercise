@@ -57,6 +57,6 @@ int main()
 	cout<<f2<<endl;
 	cout<<--f1<<endl;
 	cout<<double(f1)<<endl;
-	cout<<bool(f1)<<endl;
+	cout<<boolalpha<<bool(f1)<<endl;
 	return 0;
 }
