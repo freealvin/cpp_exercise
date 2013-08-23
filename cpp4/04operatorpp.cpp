@@ -30,6 +30,13 @@ class F{
 			f.n -= f.d;
 			return old;
 		}
+		//类型转换运算符
+		operator double(){
+			return 1.0*n/d;
+		}
+		operator bool(){
+			return n!=0;
+		}
 };
 
 ostream&  operator<<(ostream &o, const F &f)
@@ -49,5 +56,7 @@ int main()
 	cout<<f2--<<endl;
 	cout<<f2<<endl;
 	cout<<--f1<<endl;
+	cout<<double(f1)<<endl;
+	cout<<bool(f1)<<endl;
 	return 0;
 }
