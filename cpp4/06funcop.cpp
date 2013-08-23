@@ -30,7 +30,7 @@ class A{
 			return p[i];
 		}
 		
-		A& operator()(int beg, int delta)
+		A& operator()(int beg, int delta)//函数对象
 		{
 			for(uint i=0;i<n;i++)
 				p[i] = beg, beg += delta;
@@ -55,7 +55,7 @@ int main()
 	cout<< a<<endl;
 	a["a"] = 20;
 	cout<<a<<endl;
-	cout<<"a:"<<a(10, 1)<<endl;
+	cout<<"a:"<<a(10, 1)<<endl;//函数对象
 	/*
  *
  *{ 0 0 0 3 }
