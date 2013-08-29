@@ -42,7 +42,7 @@ class Teacher : public Person
 		}
 		
 		//子类成员函数如果和父类的成员函数名称相同，就会覆盖父类成员函数，即使是不同参数表
-		void show()//重写父类的成员函数,会覆盖父类的成员函数
+		void show(const char *description)//隐藏重写父类的成员函数,会覆盖父类的成员函数
 		{
 			cout<<"同学们好,我是老师"<<name<<",希望在今后的教学里，和大家一起学习"<<course<<endl;
 		}
@@ -55,7 +55,10 @@ int main()
 	a.eat("cookie");
 	b.eat("soup");
 	a.show();
-	b.show();
+	//b.show();//01inheriance.cpp:58: error: no matching function for call to ‘Teacher::show()’
+		//01inheriance.cpp:45: note: candidates are: void Teacher::show(const char*)
+	b.show("nothing");
+	b.Person::show();//调用父类被隐藏的成员函数
 	b.teach("3921");
 
 	return 0;
