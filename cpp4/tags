@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	06funcop.cpp	/^		A(int n):n(n){$/;"	f	class:A
+A	06funcop.cpp	/^class A{$/;"	c	file:
+COMPLEX_H	07complex.h	6;"	d
+Complex	07complex.h	/^		Complex(double r=0, double i=0):real(r), imagine(i){}$/;"	f	class:Complex
+Complex	07complex.h	/^class Complex$/;"	c
+DF	05yafunction.cpp	4;"	d	file:
+F	04operatorpp.cpp	/^		F(int n=0, int d=0):n(n),d(d){}$/;"	f	class:F
+F	04operatorpp.cpp	/^class F{$/;"	c	file:
+Person	01autodelete.cpp	/^	Person(){$/;"	f	struct:Person
+Person	01autodelete.cpp	/^struct Person{$/;"	s	file:
+Stack	02using_copy_constructor.cpp	/^		Stack(const Stack &t):mem(new T[t.max]), len(t.len), max(t.max){}$/;"	f	class:Stack
+Stack	02using_copy_constructor.cpp	/^		Stack(uint n):mem(new T[n]), max(n), len(0){}$/;"	f	class:Stack
+Stack	02using_copy_constructor.cpp	/^class Stack{$/;"	c	file:
+Stack	03copy_constructor_assignment.cpp	/^		Stack(const Stack &t):mem(new T[t.max]), len(t.len), max(t.max){}$/;"	f	class:Stack
+Stack	03copy_constructor_assignment.cpp	/^		Stack(uint n):mem(new T[n]), max(n), len(0){}$/;"	f	class:Stack
+Stack	03copy_constructor_assignment.cpp	/^class Stack{$/;"	c	file:
+T	02using_copy_constructor.cpp	/^typedef string T;$/;"	t	file:
+T	03copy_constructor_assignment.cpp	/^typedef string T;$/;"	t	file:
+age	01autodelete.cpp	/^	int age;$/;"	m	struct:Person	file:
+autodelete	01autodelete.cpp	/^	autodelete(Person *person):cnt(1){$/;"	f	class:autodelete
+autodelete	01autodelete.cpp	/^	autodelete(const autodelete &per):p(per.p){cnt++;cout<<cnt<<endl;}$/;"	f	class:autodelete
+autodelete	01autodelete.cpp	/^class autodelete{$/;"	c	file:
+b	05yafunction.cpp	/^DF(a); DF(b);DF(c);DF(d);DF(e);DF(f);DF(g);$/;"	v
+birth	01autodelete.cpp	/^	date birth;$/;"	m	struct:Person	file:
+c	05yafunction.cpp	/^DF(a); DF(b);DF(c);DF(d);DF(e);DF(f);DF(g);$/;"	v
+cnt	01autodelete.cpp	/^	int cnt;$/;"	m	class:autodelete	file:
+d	04operatorpp.cpp	/^	int d;$/;"	m	class:F	file:
+d	05yafunction.cpp	/^DF(a); DF(b);DF(c);DF(d);DF(e);DF(f);DF(g);$/;"	v
+date	01autodelete.cpp	/^struct date{$/;"	s	file:
+day	01autodelete.cpp	/^	int day;$/;"	m	struct:date	file:
+e	05yafunction.cpp	/^DF(a); DF(b);DF(c);DF(d);DF(e);DF(f);DF(g);$/;"	v
+f	05yafunction.cpp	/^DF(a); DF(b);DF(c);DF(d);DF(e);DF(f);DF(g);$/;"	v
+func_tab	05yafunction.cpp	/^void(*func_tab[])() = {a, b, c, d, e, f, g};$/;"	v
+g	05yafunction.cpp	/^DF(a); DF(b);DF(c);DF(d);DF(e);DF(f);DF(g);$/;"	v
+gender	01autodelete.cpp	/^	bool gender;$/;"	m	struct:Person	file:
+imagine	07complex.h	/^	double imagine;$/;"	m	class:Complex
+len	02using_copy_constructor.cpp	/^	uint len;$/;"	m	class:Stack	file:
+len	03copy_constructor_assignment.cpp	/^	uint len;$/;"	m	class:Stack	file:
+main	01autodelete.cpp	/^int main()$/;"	f
+main	02using_copy_constructor.cpp	/^int main()$/;"	f
+main	03copy_constructor_assignment.cpp	/^int main()$/;"	f
+main	04operatorpp.cpp	/^int main()$/;"	f
+main	05yafunction.cpp	/^int main()$/;"	f
+main	06funcop.cpp	/^int main()$/;"	f
+main	07main.cpp	/^int main()$/;"	f
+max	02using_copy_constructor.cpp	/^	uint max;$/;"	m	class:Stack	file:
+max	03copy_constructor_assignment.cpp	/^	uint max;$/;"	m	class:Stack	file:
+mem	02using_copy_constructor.cpp	/^	T* mem;$/;"	m	class:Stack	file:
+mem	03copy_constructor_assignment.cpp	/^	T* mem;$/;"	m	class:Stack	file:
+month	01autodelete.cpp	/^	int month;$/;"	m	struct:date	file:
+n	04operatorpp.cpp	/^	int n;$/;"	m	class:F	file:
+n	06funcop.cpp	/^	uint n;$/;"	m	class:A	file:
+name	01autodelete.cpp	/^	string name;$/;"	m	struct:Person	file:
+operator ()	06funcop.cpp	/^		A& operator()(int beg, int delta)\/\/函数对象$/;"	f	class:A
+operator *	01autodelete.cpp	/^	Person& operator*()$/;"	f	class:autodelete
+operator *	07complex.cpp	/^Complex Complex::operator*(const Complex &c2)const$/;"	f	class:Complex
+operator +	07complex.cpp	/^Complex Complex::operator+(const Complex & c2)const$/;"	f	class:Complex
+operator ++	04operatorpp.cpp	/^		F operator++(int)\/\/哑元$/;"	f	class:F
+operator ++	04operatorpp.cpp	/^		F& operator++()$/;"	f	class:F
+operator --	04operatorpp.cpp	/^		friend F operator--(F &f,int)$/;"	f	class:F
+operator --	04operatorpp.cpp	/^		friend F& operator--(F &f)$/;"	f	class:F
+operator ->	01autodelete.cpp	/^	Person* operator->(){$/;"	f	class:autodelete
+operator /	07complex.cpp	/^Complex Complex::operator\/(const Complex &c2)const$/;"	f	class:Complex
+operator <<	04operatorpp.cpp	/^ostream&  operator<<(ostream &o, const F &f)$/;"	f
+operator <<	06funcop.cpp	/^ostream& operator<<(ostream &o,const A & a)$/;"	f
+operator <<	07complex.cpp	/^ostream& operator<<(ostream &o, const Complex &c)$/;"	f
+operator =	03copy_constructor_assignment.cpp	/^		Stack & operator=(const Stack & st)$/;"	f	class:Stack
+operator []	06funcop.cpp	/^		int& operator[](const char *c)const{$/;"	f	class:A
+operator []	06funcop.cpp	/^		int& operator[](uint i)const{$/;"	f	class:A
+operator bool	04operatorpp.cpp	/^		operator bool(){$/;"	f	class:F
+operator bool	07complex.cpp	/^Complex::operator bool()const$/;"	f	class:Complex
+operator double	04operatorpp.cpp	/^		operator double(){$/;"	f	class:F
+operator string	07complex.cpp	/^Complex::operator string()const$/;"	f	class:Complex
+p	01autodelete.cpp	/^	Person* p;$/;"	m	class:autodelete	file:
+p	06funcop.cpp	/^	int *p;$/;"	m	class:A	file:
+pop	02using_copy_constructor.cpp	/^		T pop(){$/;"	f	class:Stack
+pop	03copy_constructor_assignment.cpp	/^		T pop(){$/;"	f	class:Stack
+print	02using_copy_constructor.cpp	/^		void print()$/;"	f	class:Stack
+print	03copy_constructor_assignment.cpp	/^		void print()$/;"	f	class:Stack
+push	02using_copy_constructor.cpp	/^		Stack & push(T t){$/;"	f	class:Stack
+push	03copy_constructor_assignment.cpp	/^		Stack & push(T t){$/;"	f	class:Stack
+real	07complex.h	/^	double real;$/;"	m	class:Complex
+size	06funcop.cpp	/^		uint size()const{return n;}$/;"	f	class:A
+uint	02using_copy_constructor.cpp	/^	typedef unsigned int uint;$/;"	t	class:Stack	file:
+uint	03copy_constructor_assignment.cpp	/^	typedef unsigned int uint;$/;"	t	class:Stack	file:
+uint	06funcop.cpp	/^typedef unsigned int uint;$/;"	t	file:
+year	01autodelete.cpp	/^	int year;$/;"	m	struct:date	file:
+~A	06funcop.cpp	/^		~A(){$/;"	f	class:A
+~Complex	07complex.h	/^		~Complex(){}$/;"	f	class:Complex
+~Person	01autodelete.cpp	/^	~Person(){$/;"	f	struct:Person
+~Stack	02using_copy_constructor.cpp	/^		~Stack(){$/;"	f	class:Stack
+~Stack	03copy_constructor_assignment.cpp	/^		~Stack(){$/;"	f	class:Stack
+~autodelete	01autodelete.cpp	/^	~autodelete(){$/;"	f	class:autodelete
