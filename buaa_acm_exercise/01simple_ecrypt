@@ -1,0 +1,43 @@
+Description
+有这样一个简单的加密算法：
+
+把需要加密的语句按照列排列成一个列数为C的矩阵，加密之后的语句就是将该矩阵从第一行由左至右开始按照蛇形排列出来的语句。
+
+举个简单的例子，需要加密的语句为"theresnoplacelikehomeonasnowynightx"，给定的列数C为5，那么排列出来的矩阵如下：
+
+t o i o y
+
+h p k n n
+
+e l e a i
+
+r a h s g
+
+e c o n h
+
+s e m o t
+
+n l e w x
+
+最后加密之后的语句就是"toioynnkpheleaigshareconhtomesnlewx"。
+
+现在给定加密之后的语句和矩阵的列数C，请你给出加密之前的句子。
+
+Input
+多组测试数组。
+每组测试数据，第一行是一个整数C(2 <= c <= 20)，表示矩阵的列数。
+接下来一行是只含有26个小写字母的一个语句，语句的长度不超过200，保证语句可以按照给定的行数排列成为一个矩阵。
+最后输入一个0，表示数据输入结束
+
+Output
+对于每组测试数据，输出一行，表示加密之前的句子。
+
+Sample Input
+5
+toioynnkpheleaigshareconhtomesnlewx
+3
+ttyohhieneesiaabss
+0
+Sample Output
+theresnoplacelikehomeonasnowynightx
+thisistheeasyoneab
