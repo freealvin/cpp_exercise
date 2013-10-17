@@ -99,7 +99,7 @@ int main(int argc, char* argv[])
 	}
 
 	//建立套接字
-	if(-1 == (connfd=socket(AF_INET, SOCK_STREAM,0))
+	if(-1 == (connfd=socket(AF_INET, SOCK_STREAM,0)))
 	{
 		perror("socket");
 		exit(EXIT_FAILURE);
@@ -113,7 +113,7 @@ int main(int argc, char* argv[])
 
 
 	// 连接server
-	if(connect(connfd, (struct servaddr *)&servaddr, sizeof(servaddr)) < 0)
+	if(connect(connfd, (struct sockaddr *)&servaddr, sizeof(servaddr)) < 0)
 	{
 		perror("connect");
 		exit(EXIT_FAILURE);
