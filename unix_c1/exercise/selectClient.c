@@ -20,7 +20,7 @@
 #define MAXLINE 1024;
 #define SERV_PORT 1987
 
-void send_and recv(int connfd)
+void send_and_recv(int connfd)
 {
 	int lens;
 	int stdinfd = 0;
@@ -111,7 +111,7 @@ int main(int argc, char* argv[])
 	servaddr.sin_port = htons(SERV_PORT);
 	inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
 
-	
+
 	// 连接server
 	if(connect(connfd, (struct servaddr *)&servaddr, sizeof(servaddr)) < 0)
 	{
@@ -127,8 +127,8 @@ int main(int argc, char* argv[])
 	send_and_recv(connfd);
 
 	close(connfd);
-	
+
 	printf("Exit\n");
-	
+
 	return 0;
 }
