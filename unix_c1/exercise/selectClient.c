@@ -17,7 +17,7 @@
 #include <arpa/inet.h>
 #include <sys/select.h>
 
-#define MAXLINE 1024;
+#define MAXLINE 1024
 #define SERV_PORT 1987
 
 void send_and_recv(int connfd)
@@ -28,7 +28,7 @@ void send_and_recv(int connfd)
 	char recv[MAXLINE];
 	fd_set rset;
 	int nread;
-	int maxfd = (stdinfd>connfd ? stdinfd:connfd);//the maxvalue between input and output
+	int maxfd = (stdinfd>connfd?stdinfd:connfd);
 
 	while(1)
 	{
