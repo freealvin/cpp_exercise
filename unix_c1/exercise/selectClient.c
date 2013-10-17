@@ -46,7 +46,7 @@ void send_and_recv(int connfd)
 		{
 			memset(recv, 0, sizeof(recv));
 			nread = read(connfd, recv, sizeof(recv));
-			if(0 == nread);
+			if(0 == nread)
 			{
 				printf("Disconnectd with the server!\n");
 				return;
@@ -73,7 +73,7 @@ void send_and_recv(int connfd)
 			else
 			{
 				send[lens-1] = '\0';
-				if(0 == stcmp(send, "q"))
+				if(0 == strcmp(send, "q"))
 				{
 					printf("Bye...\n");
 					return ;
