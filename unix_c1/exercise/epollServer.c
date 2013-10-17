@@ -52,7 +52,8 @@ int main(int argc, char* argv[])
     }
 
     // server 套接字
-    memset(&servaddr, 0, sizeof(servaddr));
+    // memset(&servaddr, 0, sizeof(servaddr));
+    bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
     servaddr.sin_port = htons(PORT);
@@ -111,6 +112,10 @@ int main(int argc, char* argv[])
             perror("epoll_wait");
             exit(EXIT_FAILURE);
         }
+        else
+        {
+            printf("epoll_eait success!\n");
+        }
 
         for(i=0; i<wait_fds; i++)
         {
@@ -121,8 +126,12 @@ int main(int argc, char* argv[])
                     perror("accept");
                     exit(EXIT_FAILURE);
                 }
+                else
+                {
+                    printf("accept success!\n");
+                }
 
-                printf("Server get connection from client%s:%d, new socket %d!\n", (char *)inet_ntoa(cliaddr.sin_addr), cliaddr.sin_port, conn_fd);
+                //printf("Server get connection from client%s:%d, new socket %d!\n", inet_ntoa(cliaddr.sin_addr), cliaddr.sin_port, conn_fd);
                 ev.events = EPOLLIN|EPOLLET;
                 ev.data.fd = conn_fd;
                 if( epoll_ctl(epoll_fd,EPOLL_CTL_ADD, conn_fd, &ev) < 0 )
